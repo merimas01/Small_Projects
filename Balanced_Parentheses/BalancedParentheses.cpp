@@ -39,7 +39,6 @@ bool isBalanced(string& Array)
 }
 //every last opened should be closed first
 
-
 int main() 
 {
     string x="({a=10*(c)+)b})"; 
