@@ -121,7 +121,7 @@ namespace ProvjeraTacnostiIzraza
 
         static bool NezeljeniZnakovi(string s)
         {
-            string znakovi = "!#$&?=<>;,:@{}[]|€ß";  
+            string znakovi = "!#$&?=<>;,:@|€ß";  
             if (s.Length != 0)
             {
                 for (int i = 0; i < s.Length - 1; i++)
@@ -143,7 +143,6 @@ namespace ProvjeraTacnostiIzraza
 
         static bool FunkcijaDoFunkcije(string s)
         {
-            string[] funkcije = { "sin(", "cos(", "tg(", "ctg(", "log(", "lim(", "sqrt(", "ln(" };
             string[] duplikati = { "sinsin", "coscos", "tgtg", "ctgctg", "loglog", "limlim", "sqtrsqtr", "lnln" };
             for (int i = 0; i < duplikati.Length; i++)
             {
