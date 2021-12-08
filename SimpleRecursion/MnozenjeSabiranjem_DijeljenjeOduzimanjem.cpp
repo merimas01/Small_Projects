@@ -17,12 +17,12 @@ int main()
 	int c, d;
 	cout << "Upisi dva broja (DIJELJENJE):" << endl;
 	cin >> c >> d;
-      if (d != 0)
-      {
+        if (d != 0)
+        {
 	     cout << "Rezultat(iteracija): " << dijeljenje_oduzimanjem(c,d) << endl;
 	     cout << "Rezultat(rekurzivno): " << dijelj_oduz_rekurzivno(c, d) << endl;
-      }
-      else
+        }
+        else
          cout << d <<" je nula!" << endl;
 
 	system("pause>0");
