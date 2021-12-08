@@ -5,6 +5,7 @@ using namespace std;
 bool IsItOpen(char n) {
     return n == '(' || n == '[' || n == '{';
 }
+
 bool IsItClosed(char n) {
     return n == ')' || n == ']' || n == '}';
 }
@@ -16,8 +17,7 @@ bool IsItPair(char n1, char n2) {
     return false;
 }
 
-
-bool isBalanced(string& Array)   //({a=10*(c)+)b})  size:15
+bool isBalanced(string& Array)   
 {
     string newArray;
     for (int i = 0; i < Array.length(); i++) {
@@ -40,11 +40,11 @@ bool isBalanced(string& Array)   //({a=10*(c)+)b})  size:15
 //every last opened should be closed first
 
 
-int main() {
+int main() 
+{
+    string x="({a=10*(c)+)b})"; 
 
-    string y="({a=10*(c)+)b})"; // ({a=10*(c)+b})  ({a=10*(c)+(b})
-
-    if (isBalanced(y))
+    if (isBalanced(x))
         cout << "Brackets are balanced!";
     else
         cout << "Brackets are not balanced!";
