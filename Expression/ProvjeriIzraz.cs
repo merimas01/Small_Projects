@@ -82,7 +82,7 @@ namespace ProvjeraTacnostiIzraza
         }
         static bool BiloKojeSlovo(char slovo)
         {
-            string slova = "sctl";
+            string slova = "sctl"; //s-sin, sqrt; c-cos,ctg; t-tg; l-log,lim;
             for (int i = 0; i < slova.Length; i++)
             {
                 if (slovo == slova[i])
