@@ -17,18 +17,12 @@ int main()
 	int c, d;
 	cout << "Upisi dva broja (DIJELJENJE):" << endl;
 	cin >> c >> d;
-        if (d != 0)
-        {
-	     cout << "Rezultat(iteracija): " << dijeljenje_oduzimanjem(c,d) << endl;
-	     cout << "Rezultat(rekurzivno): " << dijelj_oduz_rekurzivno(c, d) << endl;
-        }
-        else
-         cout << d <<" je nula!" << endl;
+	cout << "Rezultat(iteracija): " << dijeljenje_oduzimanjem(c,d) << endl;
+	cout << "Rezultat(rekurzija): " << dijelj_oduz_rekurzivno(c, d) << endl;
 
 	system("pause>0");
 	return 0;
 }
-
 int mnozenje_sabiranjem(int a, int b)
 {
 	int rezultat = 0;
@@ -48,16 +42,16 @@ int mnoz_sab_rekurzivno(int a, int b)
 int dijeljenje_oduzimanjem(int a, int b)
 {
 	int brojac = 0;
-	while (a)
+	while (a > 0 && a > b)
 	{
-		a = a - b;  
 		brojac++;
+		a = a - b;  
 	}
 	return brojac;
 }
 int dijelj_oduz_rekurzivno(int a, int b)
 {
-	if (a <= 0)
+	if (a <= 0 || a < b)
 		return 0;
 	return dijelj_oduz_rekurzivno(a - b, b) + 1;		
 }
