@@ -39,13 +39,10 @@ bool oktalni(int broj)
 }
 int bin(int &broj)
 {
-	//2345
 	int ostatak, ost, zbir = 0, rez = 0, brojac = 0, i = 0;
 	while (broj)
 	{
 		ostatak = broj % 10;
-		brojac = 0;
-		zbir = 0;
 		while ( brojac!=3)
 		{
 			ost = ostatak % 2;
@@ -55,7 +52,8 @@ int bin(int &broj)
 		}		
 		rez = rez + zbir * pow(10, i);
 		i += 3;
-		ostatak = 0;
+		brojac = 0;
+		zbir = 0;
 		broj /= 10;  
 	}
 	return rez;
