@@ -1,12 +1,17 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 //goldbahovo pravilo -> svaki paran broj se moze zapisati kao zbir dva neparna
 
 void ispisi_sume_neparnih(int paranBroj) {
+	
 	cout << "Za broj " << paranBroj << " ovo su sume:" << endl;
 	for (int i = 1; i < paranBroj; i += 2)
 	{
+		if (i > (paranBroj - i))  //da se ne ponavljaju iste kombinacije
+			return;
+
 		cout << i << " + " << paranBroj - i << endl;
 	}
 	cout << endl;
@@ -20,7 +25,7 @@ void provjeri_parne(int pocetak, int kraj) {
 	if (kraj % 2 == 0) k = kraj + 1;
 	else if (kraj % 2 != 0) k = kraj;
 
-	for (int i = p; i < k; i+=2)
+	for (int i = p; i < k; i+=2) //u for petlji je sada svaki broj paran
 	{
 		ispisi_sume_neparnih(i);
 	}
