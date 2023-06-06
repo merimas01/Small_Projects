@@ -1,1 +1,1 @@
-# Student_Projects
+# Small_Projects
